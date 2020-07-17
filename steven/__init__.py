@@ -13,3 +13,4 @@ app.config.from_envvar('steven_SETTINGS', silent=True)
 
 import steven.views # noqa: E402  pylint: disable=wrong-import-position
 import steven.model # noqa: E402  pylint: disable=wrong-import-position
+import steven.api # noqa: E402 pylint: disable=wrong-import-position
