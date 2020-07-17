@@ -34,7 +34,7 @@ def close_db(error):
     """
     Closing the database connection at the end of a request.
     """
-    assert error or not errors
+    assert error or not error
     sqlite_db = flask.g.pop('sqlite_db', None)
     if sqlite_db is not None:
         sqlite_db.commit()
