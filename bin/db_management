@@ -9,7 +9,7 @@ usage(){
     echo "Usage: $0 (create|destroy|reset|dump)"
 }
 
-if [ $# -ne 1]; then
+if [ $# -ne 1 ]; then
     usage
     exit 1
 fi 
@@ -25,14 +25,14 @@ case $1 in
 
     "destroy")
     rm -rf var/stevendb.sqlite3 var/uploads
-    mkdir -p var/uploads
-    sqlite3 var/stevendb.sqlite3 < sql/schema.sql
-    sqlite3 var/stevendb.sqlite3 < sql/data.sql
-    # cp sql/uploads/* var/uploads/
     ;;
 
     "reset")
     rm -rf var/stevendb.sqlite3 var/uploads
+    mkdir -p var/uploads
+    sqlite3 var/stevendb.sqlite3 < sql/schema.sql
+    sqlite3 var/stevendb.sqlite3 < sql/data.sql
+    # cp sql/uploads/* var/uploads/
     ;;
 
     "dump")
