@@ -1,2 +1,4 @@
 *__pycache__*
 env
+*.pem
+steven/static/files/*
